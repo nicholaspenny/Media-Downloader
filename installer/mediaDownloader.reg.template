@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\mydl]
+@="URL:MediaDownloader Protocol"
+"URL Protocol"=""
+
+[HKEY_CURRENT_USER\Software\Classes\mydl\shell\open\command]
+@="\"C:\\PATH\\TO\\mediaDownloader.exe\" \"%1\""
