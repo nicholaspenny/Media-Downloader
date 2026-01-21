@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      margin: 0;
+      padding: 12px;
+      width: 180px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #7562a0;
+      color: #fff;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    button {
+      width: 100%;
+      margin-bottom: 8px;
+      padding: 8px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .mp3 { background: #dfb238; color: white; }
+    .mp4 { background: #1b8aac; color: white; }
+
+    .stop {
+      background: #ca0811;
+      color: white;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Media Downloader</h3>
+
+  <button class="mp3" id="download-mp3">🎵 Audio (MP3)</button>
+  <button class="mp4" id="download-mp4">🎬 Video (MP4)</button>
+
+  <button class="stop" id="stop-download">⛔ Stop / Cancel</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

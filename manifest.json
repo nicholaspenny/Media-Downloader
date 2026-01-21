@@ -1,0 +1,45 @@
+{
+  "name": "Media Downloader",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "512": "logo512.png",
+    "128": "logo128.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "scripting",
+    "notifications"
+  ],
+  "action": {
+    "default_title": "Media Downloader",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "download_current_audio": {
+      "suggested_key": {
+        "default": "Alt+S",
+        "mac": "Option+S"
+      },
+      "description": "Download MP3 From Current Page"
+    },
+    "download_current_video": {
+      "suggested_key": {
+        "default": "Alt+Shift+S",
+        "mac": "Option+Shift+S"
+      },
+      "description": "Download MP4 From Current Page"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["yt-content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
